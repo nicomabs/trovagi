@@ -13,7 +13,10 @@ namespace Trovagi.Data
         {
         }
 
-        public DbSet<Hotel> Tournaments { get; set; }
-        public DbSet<City> Enrollments { get; set; }
+        public DbSet<Hotel> Hotels { get; set; }
+        public DbSet<City> Cities { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+            => options.UseSqlite("Data Source=trovagi.db");
     }
 }

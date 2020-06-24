@@ -7,12 +7,14 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
+
 namespace Trovagi
 {
     public class Program
     {
         public static void Main(string[] args)
         {
+            
             CreateHostBuilder(args).Build().Run();
         }
 
@@ -22,5 +24,6 @@ namespace Trovagi
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-    }
-}
+        
+        }
+};
